@@ -5,6 +5,8 @@ return {
     opts = {
       picker = {
         sources = {
+          files = { hidden = true },
+          grep = { hidden = true },
           explorer = {
             layout = { layout = { position = "right" } },
             -- <C-b> closes the explorer when it has focus (default is preview scroll)

@@ -1,0 +1,13 @@
+.DS_Store
+*.swp
+*.log
+
+# zsh: never track history, caches, tools or the local override file
+.zsh_history
+.zsh_sessions/
+.zcompdump*
+.zshrc.local
+.nvm/
+miniforge3/
+.cargo/
+.oh-my-zsh/
