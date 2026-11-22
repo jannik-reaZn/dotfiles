@@ -119,21 +119,24 @@ export NVM_DIR="$HOME/.nvm"
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/jannik/miniforge3/bin/conda' 'shell.bash' 'hook' 2> /dev/null)"
+__conda_setup="$("$HOME/miniforge3/bin/conda" 'shell.bash' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/jannik/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/jannik/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "$HOME/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "$HOME/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/jannik/miniforge3/bin:$PATH"
+        export PATH="$HOME/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
-. "$HOME/.local/bin/env"
-export PATH="$HOME/.cargo/bin:$PATH"
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+[ -d "$HOME/.cargo/bin" ] && export PATH="$HOME/.cargo/bin:$PATH"
 
 # Vite+ bin (https://viteplus.dev)
-. "/home/jannik/.config/vite-plus/env"
+[ -f "$HOME/.config/vite-plus/env" ] && . "$HOME/.config/vite-plus/env"
+
+# Machine-specific settings (untracked, see .gitignore)
+[ -f ~/.zshrc.local ] && source ~/.zshrc.local
