@@ -32,6 +32,11 @@ end
 -- Shift-Tab: previous buffer (tab). Next is <S-l>.
 vim.keymap.set("n", "<S-Tab>", "<cmd>BufferLineCyclePrev<CR>", { desc = "Previous buffer" })
 
+-- Visual mode: Shift+j / Shift+k move the selected lines down / up (and keep the selection).
+-- Replaces visual J (join lines) and K (keyword lookup).
+vim.keymap.set("x", "J", ":m '>+1<CR>gv=gv", { desc = "Move selection down", silent = true })
+vim.keymap.set("x", "K", ":m '<-2<CR>gv=gv", { desc = "Move selection up", silent = true })
+
 -- Ctrl+p: fuzzy find files (like VS Code)
 vim.keymap.set("n", "<C-p>", function() Snacks.picker.files({ cwd = LazyVim.root() }) end, { desc = "Find files" })
 

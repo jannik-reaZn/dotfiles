@@ -93,6 +93,7 @@ Add your own findings at the bottom (“My notes”).
 | Keys                        | What                                   |
 | --------------------------- | -------------------------------------- |
 | `<A-j>` / `<A-k>`           | Move line / selection down / up        |
+| `J` / `K` (visual mode)       | Move selected lines down / up          |
 | `gcc`                       | Toggle comment line                    |
 | `gc` (visual)               | Toggle comment selection               |
 | `gsa` / `gsd` / `gsr`       | Surround: add / delete / replace       |
