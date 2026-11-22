@@ -1,0 +1,17 @@
+# lazygit config (managed in ~/dotfiles, linked with `stow lazygit`)
+# Docs: https://github.com/jesseduffield/lazygit/blob/master/docs/Config.md
+gui:
+  nerdFontsVersion: "3"   # matches the Nerd Font v3 icons used by the terminal
+  theme:                  # Tokyo Night
+    activeBorderColor: ["#7aa2f7", "bold"]
+    inactiveBorderColor: ["#565f89"]
+    searchingActiveBorderColor: ["#e0af68", "bold"]
+    optionsTextColor: ["#7aa2f7"]
+    selectedLineBgColor: ["#292e42"]
+    inactiveViewSelectedLineBgColor: ["#1f2335"]
+    cherryPickedCommitFgColor: ["#7aa2f7"]
+    cherryPickedCommitBgColor: ["#bb9af7"]
+    markedBaseCommitFgColor: ["#7aa2f7"]
+    markedBaseCommitBgColor: ["#e0af68"]
+    unstagedChangesColor: ["#f7768e"]
+    defaultFgColor: ["#c0caf5"]
