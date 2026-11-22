@@ -27,6 +27,8 @@ require("lazy").setup({
     { import = "lazyvim.plugins.extras.lang.toml" },
     { import = "lazyvim.plugins.extras.linting.eslint" },
     { import = "lazyvim.plugins.extras.formatting.prettier" },
+    -- debugging (nvim-dap, dap-ui, virtual text, mason-nvim-dap)
+    { import = "lazyvim.plugins.extras.dap.core" },
     -- import/override with your plugins
     { import = "plugins" },
   },

@@ -117,6 +117,29 @@ Add your own findings at the bottom (“My notes”).
 | `<leader>ghs` / `<leader>ghr` | Stage / reset hunk                  |
 | `<leader>ghp`                 | Preview hunk                        |
 
+## Debugging (nvim-dap)
+
+| Keys                        | What                                         |
+| --------------------------- | -------------------------------------------- |
+| `<leader>db`                | Toggle breakpoint                            |
+| `<leader>dB`                | Conditional breakpoint                       |
+| `<leader>dc`                | Start / continue                             |
+| `<leader>dC`                | Run to cursor                                |
+| `<leader>dO`                | Step over                                    |
+| `<leader>di`                | Step into                                    |
+| `<leader>do`                | Step out                                     |
+| `<leader>dl`                | Run last debug config                        |
+| `<leader>dt`                | Terminate session                            |
+| `<leader>dP`                | Pause                                        |
+| `<leader>du`                | Toggle debug UI (scopes, stack, watches)     |
+| `<leader>de`                | Eval expression (normal / visual)            |
+| `<leader>dw`                | Hover widget for variable under cursor       |
+| `<leader>dr`                | Toggle REPL                                  |
+| `<leader>dj` / `<leader>dk` | Move down / up the stack frames              |
+| `<leader>dPt` / `<leader>dPc` | Python: debug test method / test class     |
+
+Workflow: set a breakpoint with `<leader>db`, press `<leader>dc` and pick "Launch file" (Python uses debugpy, installed via Mason). The UI opens automatically. `<leader>dP` is also the prefix for `dPt`/`dPc`, so which-key waits briefly before pausing.
+
 ## Terminal
 
 | Keys                  | What                     |
@@ -127,7 +150,7 @@ Add your own findings at the bottom (“My notes”).
 
 ## Language-specific
 
-- **Rust**: `<leader>cR` code action grouping (rustaceanvim), `<leader>dr` debug runnables. Cargo.toml completion via crates.nvim.
+- **Rust**: `<leader>cR` code action grouping (rustaceanvim), `<leader>dr` debug runnables (in Rust buffers; elsewhere it toggles the DAP REPL). Cargo.toml completion via crates.nvim.
 - **TypeScript / Vue**: `<leader>co` organize imports, `<leader>cM` add missing imports, `<leader>cu` remove unused imports. For Vue, both `vue_ls` and `vtsls` should be attached (`:LspInfo`).
 - **Python**: `<leader>cv` select virtualenv (venv-selector). Ruff formats and lints, pyright does types.
 
