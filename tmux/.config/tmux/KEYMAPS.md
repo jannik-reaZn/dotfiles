@@ -43,19 +43,21 @@ Config: `~/.config/tmux/tmux.conf`. Reload with `<prefix> r`.
 
 ## Panes
 
-| Keys               | What                                                                           |
-| ------------------ | ------------------------------------------------------------------------------ |
-| `<prefix> %`       | Split side by side (left / right)                                              |
-| `<prefix> "`       | Split top / bottom                                                             |
-| `<prefix> arrows`  | Move to pane in that direction                                                 |
-| `Ctrl+h/j/k/l`     | Move to left/down/up/right pane, no prefix needed (also crosses Neovim splits) |
-| `<prefix> o`       | Next pane                                                                      |
-| `<prefix> z`       | Zoom pane to full screen, again to restore                                     |
-| `<prefix> x`       | Close pane (asks to confirm)                                                   |
-| `<prefix> {` / `}` | Swap pane with previous / next                                                 |
-| `<prefix> Space`   | Cycle through pane layouts                                                     |
-| `<prefix> q`       | Show pane numbers (press number to jump)                                       |
-| Mouse              | Click a pane to focus, drag a border to resize                                 |
+| Keys                   | What                                                                             |
+| ---------------------- | -------------------------------------------------------------------------------- |
+| `<prefix> %`           | Split side by side (left / right)                                                |
+| `<prefix> "`           | Split top / bottom                                                               |
+| `<prefix> arrows`      | Move to pane in that direction                                                   |
+| `Ctrl+h/j/k/l`         | Move to left/down/up/right pane, no prefix needed (also crosses Neovim splits)   |
+| `<prefix> o`           | Next pane                                                                        |
+| `<prefix> z`           | Zoom pane to full screen, again to restore                                       |
+| `<prefix> x`           | Close pane (asks to confirm)                                                     |
+| `<prefix> {` / `}`     | Swap pane with previous / next                                                   |
+| `<prefix> Ctrl+arrows` | Resize pane in that direction by 1 cell (hold `Ctrl` to repeat), default binding |
+| `<prefix> Alt+arrows`  | Resize pane in that direction by 5 cells, default binding                        |
+| `<prefix> Space`       | Cycle through pane layouts                                                       |
+| `<prefix> q`           | Show pane numbers (press number to jump)                                         |
+| Mouse                  | Click a pane to focus, drag a border to resize                                   |
 
 ## Scrolling and copying
 
