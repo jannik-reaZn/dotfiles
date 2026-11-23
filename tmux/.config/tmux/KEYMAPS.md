@@ -1,6 +1,6 @@
 # tmux Cheat Sheet
 
-Prefix: `Ctrl+b`
+Prefix: `Ctrl+s`
 Config: `~/.config/tmux/tmux.conf`. Reload with `<prefix> r`.
 
 ## Concepts
@@ -34,7 +34,7 @@ Config: `~/.config/tmux/tmux.conf`. Reload with `<prefix> r`.
 | Keys                         | What                                             |
 | ---------------------------- | ------------------------------------------------ |
 | `<prefix> c`                 | New window                                       |
-| `<prefix> 0`–`9`             | Go to window by number (they start at 0)         |
+| `<prefix> 1`–`9`             | Go to window by number (they start at 1)         |
 | `<prefix> n` / `<prefix> p`  | Next / previous window                           |
 | `<prefix> ,`                 | Rename window                                    |
 | `<prefix> &`                 | Close window (asks to confirm)                   |
@@ -70,9 +70,9 @@ Config: `~/.config/tmux/tmux.conf`. Reload with `<prefix> r`.
 
 ## Using tmux with Neovim
 
-- **`<prefix>` is `Ctrl+b`, same as your Neovim explorer key.** Inside tmux, `Ctrl+b` goes to tmux first.
-  Press `Ctrl+b` **twice** to send one real `Ctrl+b` to Neovim. If that is annoying, change the prefix to `Ctrl+a`:
-  `set -g prefix C-a`, `unbind C-b`, `bind C-a send-prefix` in the config.
+- **`<prefix>` is `Ctrl+s`.** Inside tmux, `Ctrl+s` goes to tmux first.
+  Press `Ctrl+s` **twice** to send one real `Ctrl+s` to the program in the pane.
+  The prefix is set with `set -g prefix C-s`, `unbind C-b`, `bind C-s send-prefix` in the config.
 - Typical layout: Neovim in one pane, shell in another (`<prefix> %`), `<prefix> z` to zoom Neovim when you need space.
 - Neovim's own terminal (`<C-/>`) still works inside tmux.
 - **`Ctrl+h/j/k/l` moves between tmux panes and Neovim splits** (vim-tmux-navigator). In a Neovim pane the key goes to Neovim first and only leaves for tmux at the edge of its splits.
