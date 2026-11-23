@@ -11,3 +11,6 @@
 miniforge3/
 .cargo/
 .oh-my-zsh/
+
+# tmux plugins (managed by TPM)
+tmux/.config/tmux/plugins/
