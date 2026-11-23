@@ -29,7 +29,7 @@ Add your own findings at the bottom (“My notes”).
 | `<C-p>`           | Fuzzy find files (also `<leader><space>`)                                                              |
 | `<S-Tab>` | Previous buffer (tab); next is `<S-l>` |
 
-## Files, search, buffers
+## Files and search
 
 | Keys                        | What                                                                                  |
 | --------------------------- | ------------------------------------------------------------------------------------- |
@@ -38,11 +38,20 @@ Add your own findings at the bottom (“My notes”).
 | `<leader>fr`                | Recent files                                                                          |
 | `<leader>/`                 | Grep in project                                                                       |
 | `<leader>sw`                | Grep word under cursor                                                                |
-| `<leader>,`                 | Switch buffer                                                                         |
-| `<leader>bd`                | Close buffer                                                                          |
-| `<leader>bo`                | Close all other buffers                                                               |
-| `<S-h>` / `<S-l>`           | Previous / next buffer                                                                |
 | `<leader>e`                 | Toggle explorer. In it: `a` add, `d` delete, `r` rename, `c` copy, `m` move, `?` help |
+
+## Buffers
+
+Open files are buffers, shown as tabs in the bufferline at the top.
+
+| Keys                | What                                                          |
+| ------------------- | ------------------------------------------------------------- |
+| `<S-h>` / `<S-l>`   | Previous / next buffer (`<S-Tab>` also goes to previous)      |
+| `<leader>,`         | Buffer picker (fuzzy-switch between open buffers)             |
+| `<leader>bd`        | Close the current buffer                                      |
+| `<C-w>`             | Close the current buffer (works in normal and insert mode)    |
+| `<leader>bo`        | Close all other buffers (keeps only the current one)          |
+| `<leader>ba`        | Close all buffers (including the current one)                 |
 
 ## Code / LSP (the VS Code stuff)
 

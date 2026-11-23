@@ -15,6 +15,8 @@ vim.keymap.set("n", "<leader>Wm", function() Snacks.zen.zoom() end, { desc = "Zo
 
 -- Close current buffer (file) with Ctrl+w; window commands are on <leader>W
 vim.keymap.set({ "n", "i" }, "<C-w>", function() Snacks.bufdelete() end, { desc = "Close buffer" })
+-- Close all buffers (including the current one)
+vim.keymap.set("n", "<leader>ba", function() Snacks.bufdelete.all() end, { desc = "Close all buffers" })
 -- Toggle the file explorer (right side) with Ctrl+b, same as <leader>e
 vim.keymap.set({ "n", "i" }, "<C-b>", function()
   local open = Snacks.picker.get({ source = "explorer" })[1]
