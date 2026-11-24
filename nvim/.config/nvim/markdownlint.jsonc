@@ -1,0 +1,5 @@
+{
+  // Used by nvim-lint (see lua/plugins/markdown.lua).
+  // MD013: line length. Prose and tables in these docs are wider than 80 columns.
+  "MD013": false
+}

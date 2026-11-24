@@ -3,55 +3,71 @@
 `<leader>` = **Space**. Press it and wait: **which-key** shows every available follow-up key.
 Add your own findings at the bottom (“My notes”).
 
+```python
+def func(bla: int):
+  pass
+```
+
 ## Discovering things
 
-| Keys                           | What                                          |
-| ------------------------------ | --------------------------------------------- |
-| `<leader>` (wait)              | which-key popup of all groups                 |
-| `<leader>sk`                   | Search all keymaps                            |
-| `<leader>sh`                   | Search help                                   |
-| `<leader>sc` / `<leader>:`     | Command history / command palette-like picker |
-| `<leader>l`                    | Lazy (plugin manager)                         |
-| `<leader>cm` or `:Mason`       | Mason (LSP / formatter installer)             |
-| `:LazyExtras`                  | Enable language/tool extras                   |
-| `:LazyHealth` / `:checkhealth` | Diagnose problems                             |
-| `:LspInfo`                     | Which LSP is attached to this buffer          |
+| Keys                           | What                          |
+| ------------------------------ | ----------------------------- |
+| `<leader>` (wait)              | which-key popup of all groups |
+| `<leader>sk`                   | Search all keymaps            |
+| `<leader>sh`                   | Search help                   |
+| `<leader>sc` / `<leader>:`     | Command history /             |
+|                                | command picker                |
+| `<leader>l`                    | Lazy (plugin manager)         |
+| `<leader>cm` or `:Mason`       | Mason (LSP / formatter        |
+|                                | installer)                    |
+| `:LazyExtras`                  | Enable language/tool extras   |
+| `:LazyHealth` / `:checkhealth` | Diagnose problems             |
+| `:LspInfo`                     | LSPs attached to this buffer  |
 
 ## My custom changes
 
-| Keys              | What                                                                                                   |
-| ----------------- | ------------------------------------------------------------------------------------------------------ |
-| `<leader>w`       | **Save** file                                                                                          |
-| `<leader>W` + key | Window commands (was `<leader>w`), e.g. `<leader>Wh/j/k/l` move, `<leader>Wd` close, `<leader>Wm` zoom |
-| `jj` (insert)     | Escape                                                                                                 |
-| `<leader>e` / `<C-b>` | File explorer (on the **right**)                                                                   |
-| `<C-w>`           | Close current file (buffer). The old `<C-w>` window prefix is now `<leader>W`                          |
-| `<C-p>`           | Fuzzy find files (also `<leader><space>`)                                                              |
-| `<S-Tab>` | Previous buffer (tab); next is `<S-l>` |
+| Keys                  | What                               |
+| --------------------- | ---------------------------------- |
+| `<leader>w`           | **Save** file                      |
+| `<leader>W` + key     | Window commands (was `<leader>w`): |
+|                       | h/j/k/l move, d close, m zoom      |
+| `jj` (insert)         | Escape                             |
+| `<leader>e` / `<C-b>` | File explorer (on the **right**)   |
+| `<C-w>`               | Close current buffer. Window       |
+|                       | prefix is now `<leader>W`          |
+| `<C-p>`               | Fuzzy find files                   |
+|                       | (also `<leader><space>`)           |
+| `<S-Tab>`             | Previous buffer (tab);             |
+|                       | next is `<S-l>`                    |
 
 ## Files and search
 
-| Keys                        | What                                                                                  |
-| --------------------------- | ------------------------------------------------------------------------------------- |
-| `<leader><space>`           | Find files (project root)                                                             |
-| `<leader>ff` / `<leader>fF` | Find files (root / cwd)                                                               |
-| `<leader>fr`                | Recent files                                                                          |
-| `<leader>/`                 | Grep in project                                                                       |
-| `<leader>sw`                | Grep word under cursor                                                                |
-| `<leader>e`                 | Toggle explorer. In it: `a` add, `d` delete, `r` rename, `c` copy, `m` move, `?` help |
+| Keys                        | What                      |
+| --------------------------- | ------------------------- |
+| `<leader><space>`           | Find files (project root) |
+| `<leader>ff` / `<leader>fF` | Find files (root / cwd)   |
+| `<leader>fr`                | Recent files              |
+| `<leader>/`                 | Grep in project           |
+| `<leader>sw`                | Grep word under cursor    |
+| `<leader>e`                 | Toggle explorer           |
+
+In the explorer: `a` add, `d` delete, `r` rename, `c` copy, `m` move, `?` help.
 
 ## Buffers
 
 Open files are buffers, shown as tabs in the bufferline at the top.
 
-| Keys                | What                                                          |
-| ------------------- | ------------------------------------------------------------- |
-| `<S-h>` / `<S-l>`   | Previous / next buffer (`<S-Tab>` also goes to previous)      |
-| `<leader>,`         | Buffer picker (fuzzy-switch between open buffers)             |
-| `<leader>bd`        | Close the current buffer                                      |
-| `<C-w>`             | Close the current buffer (works in normal and insert mode)    |
-| `<leader>bo`        | Close all other buffers (keeps only the current one)          |
-| `<leader>ba`        | Close all buffers (including the current one)                 |
+| Keys              | What                        |
+| ----------------- | --------------------------- |
+| `<S-h>` / `<S-l>` | Previous / next buffer      |
+|                   | (`<S-Tab>` also goes back)  |
+| `<leader>,`       | Buffer picker               |
+|                   | (fuzzy-switch open buffers) |
+| `<leader>bd`      | Close the current buffer    |
+| `<C-w>`           | Close current buffer        |
+|                   | (normal and insert mode)    |
+| `<leader>bo`      | Close all other buffers     |
+| `<leader>ba`      | Close all buffers           |
 
 ## Code / LSP (the VS Code stuff)
 
@@ -87,33 +103,34 @@ Open files are buffers, shown as tabs in the bufferline at the top.
 
 ## Windows, splits, tabs
 
-| Keys                       | What                   |
-| -------------------------- | ---------------------- |
-| `<C-h/j/k/l>` | Move between windows and tmux panes (vim-tmux-navigator) |
-| `<leader>-` / `<leader>\|` | Split below / right    |
-| `<leader>Wd`               | Close window           |
-| `<leader>Wm`               | Zoom / maximize window |
-| `<C-Up/Down/Left/Right>`   | Resize window          |
-| `<leader><tab><tab>`       | New tab                |
-| `<leader><tab>]` / `[`     | Next / previous tab    |
+| Keys                       | What                     |
+| -------------------------- | ------------------------ |
+| `<C-h/j/k/l>`              | Move between windows and |
+|                            | tmux panes               |
+| `<leader>-` / `<leader>\|` | Split below / right      |
+| `<leader>Wd`               | Close window             |
+| `<leader>Wm`               | Zoom / maximize window   |
+| `<C-Up/Down/Left/Right>`   | Resize window            |
+| `<leader><tab><tab>`       | New tab                  |
+| `<leader><tab>]` / `[`     | Next / previous tab      |
 
 ## Editing
 
-| Keys                        | What                                   |
-| --------------------------- | -------------------------------------- |
-| `<A-j>` / `<A-k>`           | Move line / selection down / up        |
-| `J` / `K` (visual mode)       | Move selected lines down / up          |
-| `gcc`                       | Toggle comment line                    |
-| `gc` (visual)               | Toggle comment selection               |
-| `gsa` / `gsd` / `gsr`       | Surround: add / delete / replace       |
-| `s` + 2 chars               | Flash: jump anywhere on screen         |
-| `<C-s>`                     | Save (also works in insert mode)       |
-| `<leader>qq`                | Quit all                               |
-| `<leader>uw`                | Toggle word wrap                       |
-| `<leader>us`                | Toggle spell check                     |
-| `<leader>ur`                | Clear search highlight / redraw        |
-| `<leader>uf`                | Toggle format on save                  |
-| `<leader>ul` / `<leader>uL` | Toggle line numbers / relative numbers |
+| Keys                        | What                             |
+| --------------------------- | -------------------------------- |
+| `<A-j>` / `<A-k>`           | Move line / selection down / up  |
+| `J` / `K` (visual mode)     | Move selected lines down / up    |
+| `gcc`                       | Toggle comment line              |
+| `gc` (visual)               | Toggle comment selection         |
+| `gsa` / `gsd` / `gsr`       | Surround: add / delete / replace |
+| `s` + 2 chars               | Flash: jump anywhere on screen   |
+| `<C-s>`                     | Save (also works in insert mode) |
+| `<leader>qq`                | Quit all                         |
+| `<leader>uw`                | Toggle word wrap                 |
+| `<leader>us`                | Toggle spell check               |
+| `<leader>ur`                | Clear search highlight / redraw  |
+| `<leader>uf`                | Toggle format on save            |
+| `<leader>ul` / `<leader>uL` | Toggle line / relative numbers   |
 
 ## Git
 
@@ -128,24 +145,26 @@ Open files are buffers, shown as tabs in the bufferline at the top.
 
 ## Debugging (nvim-dap)
 
-| Keys                        | What                                         |
-| --------------------------- | -------------------------------------------- |
-| `<leader>db`                | Toggle breakpoint                            |
-| `<leader>dB`                | Conditional breakpoint                       |
-| `<leader>dc`                | Start / continue                             |
-| `<leader>dC`                | Run to cursor                                |
-| `<leader>dO`                | Step over                                    |
-| `<leader>di`                | Step into                                    |
-| `<leader>do`                | Step out                                     |
-| `<leader>dl`                | Run last debug config                        |
-| `<leader>dt`                | Terminate session                            |
-| `<leader>dP`                | Pause                                        |
-| `<leader>du`                | Toggle debug UI (scopes, stack, watches)     |
-| `<leader>de`                | Eval expression (normal / visual)            |
-| `<leader>dw`                | Hover widget for variable under cursor       |
-| `<leader>dr`                | Toggle REPL                                  |
-| `<leader>dj` / `<leader>dk` | Move down / up the stack frames              |
-| `<leader>dPt` / `<leader>dPc` | Python: debug test method / test class     |
+| Keys                          | What                              |
+| ----------------------------- | --------------------------------- |
+| `<leader>db`                  | Toggle breakpoint                 |
+| `<leader>dB`                  | Conditional breakpoint            |
+| `<leader>dc`                  | Start / continue                  |
+| `<leader>dC`                  | Run to cursor                     |
+| `<leader>dO`                  | Step over                         |
+| `<leader>di`                  | Step into                         |
+| `<leader>do`                  | Step out                          |
+| `<leader>dl`                  | Run last debug config             |
+| `<leader>dt`                  | Terminate session                 |
+| `<leader>dP`                  | Pause                             |
+| `<leader>du`                  | Toggle debug UI                   |
+|                               | (scopes, stack, watches)          |
+| `<leader>de`                  | Eval expression (normal / visual) |
+| `<leader>dw`                  | Hover variable under cursor       |
+| `<leader>dr`                  | Toggle REPL                       |
+| `<leader>dj` / `<leader>dk`   | Move down / up the stack frames   |
+| `<leader>dPt` / `<leader>dPc` | Python: debug test                |
+|                               | method / class                    |
 
 Workflow: set a breakpoint with `<leader>db`, press `<leader>dc` and pick "Launch file" (Python uses debugpy, installed via Mason). The UI opens automatically. `<leader>dP` is also the prefix for `dPt`/`dPc`, so which-key waits briefly before pausing.
 
