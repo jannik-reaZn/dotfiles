@@ -28,8 +28,6 @@ Cheat sheets: `nvim/.config/nvim/KEYMAPS.md`, `tmux/.config/tmux/KEYMAPS.md`.
 
 ## Setup on a new machine
 
-> Documented, but not tested on a fresh machine yet.
-
 ### 1. Prerequisites
 
 Install with the system package manager:
@@ -92,6 +90,13 @@ stow nvim tmux zsh
 2. Run `nvim` once and wait. LazyVim installs plugins, treesitter parsers and the language servers (Mason).
    Check with `:Mason` and `:Lazy`.
 3. Run `tmux`.
+
+If you linked the configs manually, install TPM and the tmux plugins once (`install.sh` does this for you):
+
+```sh
+git clone --depth=1 https://github.com/tmux-plugins/tpm ~/.config/tmux/plugins/tpm
+~/.config/tmux/plugins/tpm/bin/install_plugins
+```
 
 ## Daily use
 

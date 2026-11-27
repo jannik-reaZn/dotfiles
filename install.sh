@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 # Idempotent installer for dev containers (used by the VS Code "dotfiles.installCommand").
-# Installs missing tools (stow, tmux, neovim, lazygit and their helpers) and links the configs with stow.
+# Installs missing tools (stow, tmux, neovim, lazygit and their helpers), links the configs with stow
+# and installs the tmux plugins.
 set -euo pipefail
 cd "$(dirname "$0")"
 
@@ -41,9 +42,19 @@ install_lazygit() {
         | $SUDO tar -xz -C /usr/local/bin lazygit
 }
 
+install_tmux_plugins() {
+    local tpm_dir="$HOME/.config/tmux/plugins/tpm"
+    # Check for the executable, not the folder, so an empty folder doesn't count as installed
+    [ -x "$tpm_dir/tpm" ] || git clone -q --depth=1 https://github.com/tmux-plugins/tpm "$tpm_dir"
+    # Installs the @plugin entries from tmux.conf; skips the ones already present
+    "$tpm_dir/bin/install_plugins"
+}
+
 # Collect missing apt packages and install them in one go
 APT_PACKAGES=()
 need() { command -v "$1" >/dev/null || APT_PACKAGES+=("$2"); }
+need git git
+need curl curl
 need stow stow
 need tmux tmux
 need rg ripgrep
@@ -60,3 +71,6 @@ command -v lazygit >/dev/null || install_lazygit
 
 # -R re-stows, so running this script multiple times is safe
 stow -R "${PACKAGES[@]}"
+
+# Needs the linked tmux.conf, so this runs after stow
+install_tmux_plugins
